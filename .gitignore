@@ -1,0 +1,29 @@
+@"
+# Archivos compilados de Java
+*.class
+/out/
+/target/
+/bin/
+/build/
+
+# Archivos de IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# Archivos temporales y del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de logs
+*.log
+
+# Archivos generados por Maven o Gradle
+.mvn/
+.gradle/
+build/
+
+# Otros archivos temporales
+*.tmp
+*.temp
+"@ > .gitignore
