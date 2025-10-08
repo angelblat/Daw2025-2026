@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int hora=0, minuto=0, segundo=0;
+        boolean error = true;
+        Scanner entrada = new Scanner (System.in);
+
+        while (error){
+
+            error= false;
+            System.out.println("Introduce la hora");
+            hora = entrada.nextInt();
+            System.out.println("Introduce los minutos");
+            minuto = entrada.nextInt();
+            System.out.println("Introduce los segundos");
+            segundo = entrada.nextInt();
+
+            if (hora >23 || hora <0 || minuto > 59 || minuto < 0 || segundo > 59 || segundo < 0){
+                error = true;
+            }
+
+            if (segundo==59 && !error) {
+                if (minuto == 59) {
+                    segundo=00;
+                    minuto=0;
+                    hora++;
+                }
+                if (hora > 23) {
+                    hora = 0;
+                }
+            } else {
+                segundo++;
+            }
+
+            if (error){
+                System.out.println("Has introducido algún dato incorrecto");
+            }
+        }
+
+        System.out.println("La hora pasado 1 segundo es " + hora + ":" + minuto + ":" + segundo + " (H:M:S).");
+    }
+}
