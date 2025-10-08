@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int horasTrabajadas;
+        float tarifaNormal = 25, impuestos, salario=0, salarioBruto=0, salarioNeto=0;
+        String nombre;
+        Scanner entrada = new Scanner(System.in);
+        boolean fin = false;
+
+        System.out.println("Cual es su nombre");
+        nombre = entrada.nextLine();
+        System.out.println("Cuantas horas has trabajado");
+        horasTrabajadas = entrada.nextInt();
+
+        while (!fin) {
+            if (horasTrabajadas <= 35 & horasTrabajadas >= 0){
+                salario = horasTrabajadas * tarifaNormal;
+                salarioBruto = salario;
+                fin=true;
+            } else {
+                tarifaNormal = tarifaNormal * 1.5f;
+                salario = horasTrabajadas * tarifaNormal;
+                salarioBruto = salario;
+                fin = true;
+            }
+        }
+
+        if (salarioBruto>500 && salarioBruto <= 900) {
+            salarioNeto = salarioBruto * 0.75f;
+        } else if (salarioBruto > 900) {
+            salarioNeto = salarioBruto * 0.55f;
+        } else {
+            salarioNeto = salarioBruto;
+        }
+
+        System.out.println("Su salario sr/a " + nombre + " bruto es de " + salarioBruto + " \ny el neto es de " +
+                 salarioNeto);
+
+        if (salarioNeto == salarioBruto) {
+            System.out.println("No se ha aplicado ninguna retención");
+        } else if (salarioBruto * 0.75f == salarioNeto ){
+            System.out.println("Se ha retenido el 25%");
+        } else {
+            System.out.println("Se ha retenido el 45%");
+        }
+    }
+}
