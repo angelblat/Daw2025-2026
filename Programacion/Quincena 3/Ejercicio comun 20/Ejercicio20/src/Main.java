@@ -42,6 +42,6 @@ public class Main {
             }
         }
 
-        System.out.println("La hora pasado 1 segundo es " + hora + ":" + minuto + ":" + segundo + " (H:M:S).");
+        System.out.println("La hora transcurrido 1 segundo es " + hora + ":" + minuto + ":" + segundo + " (H:M:S).");
     }
 }

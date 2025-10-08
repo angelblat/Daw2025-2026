@@ -30,7 +30,7 @@ public class Main {
                     minuto=0;
                     hora++;
                 }
-                if (hora >= 23) {
+                if (hora > 23) {
                     hora = 0;
                 }
             } else {
