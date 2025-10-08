@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+
+public class Main {
+    public static void main(String[] args) {
+        int mes;
+        int fin=1;
+        Scanner entrada = new Scanner(System.in);
+
+        while (true){
+            mes=0;
+            fin = 0;
+            System.out.println("Introduce un mes por su número");
+            mes = entrada.nextInt();
+            switch (mes) {
+                case 1:
+                    System.out.println("El mes introducido es Enero");
+                case 2:
+                    System.out.println("El mes introducido es Febrero");
+                case 3:
+                    System.out.println("El mes introducido es Marzo");
+                case 4:
+                    System.out.println("El mes introducido es Abril");
+                case 5:
+                    System.out.println("El mes introducido es Mayo");
+                case 6:
+                    System.out.println("El mes introducido es Junio");
+                case 7:
+                    System.out.println("El mes introducido es Julio");
+                case 8:
+                    System.out.println("El mes introducido es Agosto");
+                case 9:
+                    System.out.println("El mes introducido es Septiembre");
+                case 10:
+                    System.out.println("El mes introducido es Octubre");
+                case 11:
+                    System.out.println("El mes introducido es Noviembre");
+                case 12:
+                    System.out.println("El mes introducido es Diciembre");
+                default:
+                    System.out.println("No has introducido un número valido, vuelve a introducir otro número");
+                    fin=1;
+            }
+        }
+    }
+}
