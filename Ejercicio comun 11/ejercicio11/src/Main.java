@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+        //Programa que pide la edad y nos muestra un mensaje "Eres mayor de edad" o el mensaje "Eres menor de edad"
+
+        int edad;
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("Cual es tu edad");
+        edad = entrada.nextInt();
+
+        if (edad >= 18) {
+            System.out.println("Eres mayor de edad");
+        } else if (edad >= 0) {
+            System.out.println("Eres menor de edad");
+        }
+
+    }
+}
