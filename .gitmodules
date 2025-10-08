@@ -1,0 +1,3 @@
+[submodule "Prueba/Prueba1"]
+	path = Prueba/Prueba1
+	url = https://github.com/tuusuario/Prueba1.git
