@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int num, acumulador=0;
+        boolean end = false;
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("Introduce un número o introduce -1 para finalizar");
+
+        do{
+            num = entrada.nextInt();
+            if (num < -1 || num > 10){
+                end = true;
+            }
+            if (num == 10){
+                acumulador++;
+            }
+        } while (num != -1 && !end);
+
+        if (acumulador>0){
+            System.out.println("Ha habido " + acumulador + " nota/s con valor 10");
+        } else if (end){
+            System.out.println("Has introducido un número no comprendido entre el 0 y el 10 y tampoco el -1");
+        } else {
+            System.out.println("No ha habido ninguna nota con valor 10");
+        }
+
+    }
+}
